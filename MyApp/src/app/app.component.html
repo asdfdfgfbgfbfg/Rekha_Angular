@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+<div *ngFor="let name of names">{{ name }}</div>
+<br />
+<ul *ngFor="let mobObject of mobObjects">
+  <li>ID : {{ mobObject.id }}</li>
+  <li>Name : {{ mobObject.id }}</li>
+  <li>Price : {{ mobObject.price }}</li>
+  <li *ngIf="mobObject.Available > 0; else demo">{{ mobObject.Available }}</li>
+  <ng-template #demo>Out Of Stock</ng-template>
+  <br />
+</ul>

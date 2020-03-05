@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<h2>{{ dummyArray[0] }}</h2>
+
+<p><b>Trainer: </b> {{ ownerObj.trainer }}</p>
+<p><b>Strength: </b> {{ ownerObj.Strength }}</p>
+<p><b>Timing: </b>{{ ownerObj.Timing }}</p>
+
+<table mdbTable border="1px" width="1000">
+  <thead>
+    <tr>
+      <th *ngFor="let head of headingArray">{{ head }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let el of dummyObj">
+      <th>{{ el.rno }}</th>
+      <th>{{ el.name }}</th>
+      <th>{{ el.course }}</th>
+      <th>{{ el.duration }}</th>
+    </tr>
+  </tbody>
+</table>
