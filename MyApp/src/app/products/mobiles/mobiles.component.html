@@ -1,0 +1,91 @@
+<div class="row">
+  <div *ngFor="let mobObject of mobObjects">
+    <div class="col s1 m4">
+      <div class="card" style="box-shadow: 17px 14px 20px;">
+        <div>
+          <span [ngSwitch]="mobObject.name">
+            <img
+              *ngSwitchCase="'Nokia'"
+              src="../../../assets/img/nokia-1.jpg"
+            />
+            <img
+              *ngSwitchCase="'Samsung'"
+              src="../../../assets/img/mob2.png"
+              width="290px"
+            />
+            <img
+              *ngSwitchCase="'Apple'"
+              src="../../../assets/img/apple-3.jpg"
+              width="170px"
+            />
+          </span>
+          <div style="text-align: center;">
+            <span [style.color]="setColor(mobObject.name)" class="card-title">
+              <b>{{ mobObject.name }}</b>
+            </span>
+          </div>
+          <div
+            class="card-content"
+            style="background-color: rgb(230, 224, 224);"
+          >
+            <p>
+              <span [style.color]="setColor(mobObject.name)">Name :</span>
+              {{ mobObject.name }}
+            </p>
+            <p>
+              <span [style.color]="setColor(mobObject.name)">Price :</span>
+              {{ mobObject.price }}
+            </p>
+            <p>
+              <span [style.color]="setColor(mobObject.name)"
+                >Description :
+              </span>
+              {{ mobObject.desc }}
+            </p>
+            <p
+              [ngStyle]="{
+                display: mobObject.Available > 0 ? 'inline-block' : 'none'
+              }"
+              *ngIf="mobObject.Available > 0"
+            >
+              <span [style.color]="setColor(mobObject.name)">Stock :</span>
+              {{ mobObject.Available }}
+            </p>
+            <p class="blinking" *ngIf="mobObject.Available === 0">
+              <b>Opsss!!! Out of Stock</b>
+            </p>
+            <div>
+              <span
+                [ngSwitch]="mobObject.Country"
+                [style.color]="setColor(mobObject.name)"
+              >
+                Country :
+                <img
+                  *ngSwitchCase="'Australia'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+                  width="24"
+                />
+                <img
+                  *ngSwitchCase="'Germany'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+                  width="24"
+                />
+                <img
+                  *ngSwitchDefault
+                  src="https://image.freepik.com/free-vector/japan-logo_7243-126.jpg"
+                  width="24"
+                />
+              </span>
+            </div>
+          </div>
+
+          <!-- <div class="card-action">
+          <a href="#">This is a link</a>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End : row -->
+</div>

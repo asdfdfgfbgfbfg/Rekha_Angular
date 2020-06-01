@@ -1,0 +1,23 @@
+<div id="index-banner" class="parallax-container">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <div class="parallax">
+        <img src="./../assets/img/shop-7.jpg" />
+      </div>
+      <h1
+        class="header center"
+        style="color:#101010;box-shadow: inset -13px -9px 20px;"
+      >
+        E-Cart Shopping
+      </h1>
+      <div
+        class="cardnames"
+        *ngFor="let name of names"
+        style="font-size: 30px;"
+      >
+        <p [style.color]="setColor(name)">{{ name }}</p>
+      </div>
+    </div>
+  </div>
+  <br /><br />
+</div>

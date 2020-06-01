@@ -1,0 +1,84 @@
+<div class="row">
+  <div *ngFor="let bike of bikes">
+    <div class="col s2 m4">
+      <div class="card" style="box-shadow: 17px 14px 20px;">
+        <div>
+          <span [ngSwitch]="bike.name">                       
+            <img
+              *ngSwitchCase="'Yamaha'"
+              src="../../../assets/img/bike-1.jpg"
+              width="195px"
+            />
+            <img *ngSwitchCase="'Bajaj'" src="../../../assets/img/bike-2.jpg" />
+            <img
+              *ngSwitchCase="'Splender Plus'"
+              src="../../../assets/img/bike-3.jpg"
+              width="150px"
+            />
+          </span>
+          <div style="text-align: center;">
+            <span [style.color]="setColor(bike.name)" class="card-title">
+              <b>{{ bike.name }}</b>
+            </span>
+          </div>
+          <div
+            class="card-content"
+            style="background-color: rgb(230, 224, 224);"
+          >
+            <p>
+              <span [style.color]="setColor(bike.name)">Name :</span>
+              {{ bike.name }}
+            </p>
+            <p>
+              <span [style.color]="setColor(bike.name)">Price :</span>
+              {{ bike.price }}
+            </p>
+            <p>
+              <span [style.color]="setColor(bike.name)">Description : </span>
+              {{ bike.desc }}
+            </p>
+            <p
+              [ngStyle]="{
+                display: bike.Available > 0 ? 'inline-block' : 'none'
+              }"
+              *ngIf="bike.Available > 0"
+            >
+              <span [style.color]="setColor(bike.name)">Stock :</span>
+              {{ bike.Available }}
+            </p>
+            <p class="blinking" *ngIf="bike.Available === 0">
+              <b>Opsss!!! Out of Stock</b>
+            </p>
+            <div>
+              <span
+                [ngSwitch]="bike.Country"
+                [style.color]="setColor(bike.name)"
+              >
+                Country :
+                <img
+                  *ngSwitchCase="'Australia'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+                  width="24"
+                />
+                <img
+                  *ngSwitchCase="'Germany'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+                  width="24"
+                />
+                <img
+                  *ngSwitchDefault
+                  src="https://image.freepik.com/free-vector/japan-logo_7243-126.jpg"
+                  width="24"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

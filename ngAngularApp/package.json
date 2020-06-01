@@ -1,47 +1,57 @@
 {
-  "name": "ng-angular-app",
-  "version": "0.0.0",
+  "_args": [
+    [
+      "al-shah@1.1.1",
+      "/Users/sandeep/Manoj/tez/tejas/tejas"
+    ]
+  ],
+  "_from": "al-shah",
+  "_id": "al-shah@1.9.7",
+  "_inBundle": false,
+  "_integrity": "sha512-/lby9LRVuJ/7ylcTl6ijNVSgF/a6jihRv74DOstQnAoCPKToF0BZ6H/ABPAqIMxnluAjKKB18s6wQNlyvg7X7Q==",
+  "_location": "/al-shah",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "al-shah",
+    "name": "al-shah",
+    "escapedName": "al-shah",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/al-shah/-/al-shah-1.9.7.tgz",
+  "_shasum": "71bbe606885b3517b60a7efbc871473cde00404f",
+  "_spec": "al-shah",
+  "_where": "F:\\Rekha_Angular\\ngAngularApp",
+  "author": {
+    "name": "Manoj",
+    "email": "ptlmnj89@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/msraosurya/al-shah/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "materializeParallaxTemplate",
+  "homepage": "https://github.com/msraosurya/al-shah#readme",
+  "keywords": [
+    "al-shah"
+  ],
+  "license": "MIT",
+  "main": "index.html",
+  "name": "al-shah",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msraosurya/al-shah.git"
+  },
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "~9.0.2",
-    "@angular/common": "~9.0.2",
-    "@angular/compiler": "~9.0.2",
-    "@angular/core": "~9.0.2",
-    "@angular/forms": "~9.0.2",
-    "@angular/platform-browser": "~9.0.2",
-    "@angular/platform-browser-dynamic": "~9.0.2",
-    "@angular/router": "~9.0.2",
-    "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "~0.900.3",
-    "@angular/cli": "~9.0.3",
-    "@angular/compiler-cli": "~9.0.2",
-    "@angular/language-service": "~9.0.2",
-    "@types/node": "^12.11.1",
-    "@types/jasmine": "~3.5.0",
-    "@types/jasminewd2": "~2.0.3",
-    "codelyzer": "^5.1.2",
-    "jasmine-core": "~3.5.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage-istanbul-reporter": "~2.1.0",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.2",
-    "protractor": "~5.4.3",
-    "ts-node": "~8.3.0",
-    "tslint": "~5.18.0",
-    "typescript": "~3.7.5"
-  }
+  "version": "1.9.7"
 }

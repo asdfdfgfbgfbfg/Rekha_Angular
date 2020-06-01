@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<!-- <h1>{{ title }}</h1>
 <h2 *ngFor="let name of names">{{ name }}</h2>
 <br />
 
@@ -24,4 +24,49 @@
   <p [ngStyle]="{ color: 'red' }" *ngIf="mobObject.Available === 0">
     <b>Out of Stock</b>
   </p>
+</div> -->
+<div>
+  <!-- nav.component.html -->
+
+  <app-nav></app-nav>
+
+  <!--/ nav.component.html -->
+
+  <!-- banner-one.component.html -->
+  <app-banner-one></app-banner-one>
+  <!--/ banner-one.component.html -->
+
+  <!-- products.component.html -->
+  <app-products></app-products>
+  <!--/ products.component.html -->
+
+  <!-- banner-two.component.html -->
+  <app-banner-two></app-banner-two>
+  <!--/ banner-two.component.html -->
+
+  <!-- contact-us.component.html -->
+  <app-contact-us></app-contact-us>
+  <!--/ contact-us.component.html -->
+
+  <!-- banner-three.component.html -->
+  <app-banner-three></app-banner-three>
+  <!--/ banner-three.component.html -->
+  <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+        >Agree</a
+      >
+    </div>
+  </div>
+  <!-- footer.component.html -->
+  <app-footer></app-footer>
+  <!-- footer.component.html -->
 </div>

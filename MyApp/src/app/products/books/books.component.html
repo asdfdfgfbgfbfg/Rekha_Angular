@@ -1,0 +1,130 @@
+<div class="row">
+  <div *ngFor="let book of books">
+    <div class="col s2 m4">
+      <!-- <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="../assets/img/3.jpeg" />
+        </div>
+        <div style="text-align: center;">
+          <span [style.color]="setColor(book.name)" class="card-title"
+            ><b>{{ book.name }}</b></span
+          >
+        </div>
+        <div class="card-content" style="background-color: rgb(230, 224, 224);">
+          <p>
+            <span [style.color]="setColor(book.name)">ID :</span>
+            {{ book.id }}
+          </p>
+          <p>
+            <span [style.color]="setColor(book.name)">Name :</span>
+            {{ book.name }}
+          </p>
+          <p>
+            <span [style.color]="setColor(book.name)">Price :</span>
+            {{ book.price }}
+          </p>
+          <p>
+            <span [style.color]="setColor(book.name)">Description : </span>
+            {{ book.desc }}
+          </p>
+          <p
+            [ngStyle]="{
+              display: book.Available > 0 ? 'inline-block' : 'none'
+            }"
+            *ngIf="book.Available > 0"
+          >
+            <span [style.color]="setColor(book.name)">Stock :</span>
+            {{ book.Available }}
+          </p>
+          <p class="blinking" *ngIf="book.Available === 0">
+            <b>Opsss!!! Out of Stock</b>
+          </p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div> -->
+      <div class="card" style="box-shadow: 17px 14px 20px;">
+        <div>
+          <span [ngSwitch]="book.name">
+            <img
+              *ngSwitchCase="'101 Books To Read'"
+              src="../../../assets/img/book1.jpg"
+              width="195px"
+            />
+            <img
+              *ngSwitchCase="'Psychology Books'"
+              src="../../../assets/img/book3.jpg"
+            />
+            <img
+              *ngSwitchCase="'Read before you die'"
+              src="../../../assets/img/book4.jpg"
+              width="150px"
+            />
+          </span>
+          <div style="text-align: center;">
+            <span [style.color]="setColor(book.name)" class="card-title">
+              <b>{{ book.name }}</b>
+            </span>
+          </div>
+          <div
+            class="card-content"
+            style="background-color: rgb(230, 224, 224);"
+          >
+            <p>
+              <span [style.color]="setColor(book.name)">Name :</span>
+              {{ book.name }}
+            </p>
+            <p>
+              <span [style.color]="setColor(book.name)">Price :</span>
+              {{ book.price }}
+            </p>
+            <p>
+              <span [style.color]="setColor(book.name)">Description : </span>
+              {{ book.desc }}
+            </p>
+            <p
+              [ngStyle]="{
+                display: book.Available > 0 ? 'inline-block' : 'none'
+              }"
+              *ngIf="book.Available > 0"
+            >
+              <span [style.color]="setColor(book.id)">Stock :</span>
+              {{ book.Available }}
+            </p>
+            <p class="blinking" *ngIf="book.Available === 0">
+              <b>Opsss!!! Out of Stock</b>
+            </p>
+            <div>
+              <span
+                [ngSwitch]="book.Country"
+                [style.color]="setColor(book.name)"
+              >
+                Country :
+                <img
+                  *ngSwitchCase="'Australia'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Flag_of_Australia.svg/23px-Flag_of_Australia.svg.png"
+                  width="24"
+                />
+                <img
+                  *ngSwitchCase="'Germany'"
+                  src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/23px-Flag_of_Germany.svg.png"
+                  width="24"
+                />
+                <img
+                  *ngSwitchDefault
+                  src="https://image.freepik.com/free-vector/japan-logo_7243-126.jpg"
+                  width="24"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
