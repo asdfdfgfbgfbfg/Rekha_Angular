@@ -1,0 +1,20 @@
+<p>
+  Login
+</p>
+
+<!-- step: 6 => create UI to get 'username' & 'password' -->
+
+<input type="text" #user value="admin" /><br />
+<input type="password" #pass value="admin" /><br />
+<!-- ‘#user’ and ‘#pass’ template Variable, same as document.getEBI() -->
+
+<!-- catch and pass the value as arguments in 'ckeck()' method -->
+<button
+  (click)="check(user.value, pass.value)"
+  class="waves-effect waves-light btn"
+>
+  Login
+</button>
+<!-- for step 7 go to 'login.component.ts' -->
+<br />
+<span style="color: red;">{{ msg }}</span>

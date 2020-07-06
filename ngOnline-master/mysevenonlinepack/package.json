@@ -1,0 +1,22 @@
+{
+  "name": "mysevenonlinepack",
+  "version": "1.0.0",
+  "description": "\"demo code for ng batch..!\"",
+  "main": "imp.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSraoSuryawanshi/ngOnline.git"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MSraoSuryawanshi/ngOnline/issues"
+  },
+  "homepage": "https://github.com/MSraoSuryawanshi/ngOnline#readme"
+}
