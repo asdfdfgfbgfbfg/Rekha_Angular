@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { FooterComponent } from '../layouts/footer/footer.component';
 import { BannerThreeComponent } from '../layouts/banner-three/banner-three.component';
 import { ContactUsComponent } from '../layouts/contact-us/contact-us.component';
@@ -26,7 +28,7 @@ import { SamsungComponent } from '../products/mob-part/samsung/samsung.component
     MotoComponent,
     SamsungComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   exports: [
     FooterComponent,
     BannerThreeComponent,

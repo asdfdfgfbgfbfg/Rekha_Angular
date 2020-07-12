@@ -1,1 +1,44 @@
 <h1>dashboard works!</h1>
+<input type="number" #id value="id" />
+<input type="text" #name value="name" />
+<input type="text" #desc value="desc" />
+<input type="number" #instock value="instock" />
+<input type="boolean" #prodclr value="canpur" />
+<input type="boolean" #clsvar value="clsvar" />
+<input type="text" #country value="country" />
+<input type="number" #price value="price" />
+<input type="text" #prodimage value="prodimage" />
+<input type="number" #quantity value="quantity" />
+<button class="waves-effect waves-light btn">Add Product</button>
+
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Description</th>
+    <th>inStock</th>
+    <th>prodColor</th>
+    <th>canPurchcanPurch</th>
+    <th>clsVar</th>
+    <th>country</th>
+    <th>price</th>
+    <th>prodImg</th>
+    <th>quantity</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mobPart of mobParts">
+      <td>{{ mobPart.id }}</td>
+      <td>{{ mobPart.name }}</td>
+      <td>{{ mobPart.description }}</td>
+      <td>{{ mobPart.inStock }}</td>
+      <td>{{ mobPart.prodColor }}</td>
+      <td>{{ mobPart.canPurchcanPurch }}</td>
+      <td>{{ mobPart.clsVar }}</td>
+      <td>{{ mobPart.country }}</td>
+      <td>{{ mobPart.price }}</td>
+      <td>{{ mobPart.prodImg }}</td>
+      <td>{{ mobPart.quantity }}</td>
+      <td><a [routerLink]="['mobPart/edit', mobPart.id]">Edit</a></td>
+    </tr>
+  </tbody>
+</table>

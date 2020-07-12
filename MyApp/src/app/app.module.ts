@@ -38,15 +38,7 @@ import { BikesComponent } from "./products/bikes/bikes.component";
     MatMenuModule,
     MatToolbarModule,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    AllMaterialModule,
-    AllPipesModule,
-    MatToolbarModule,
-  ],
+  imports: [BrowserModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

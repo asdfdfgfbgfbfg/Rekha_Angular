@@ -14,3 +14,5 @@ export class SimpleStyleDirective {
 // Obj types :  new 4, 3
 
 // document.getEBId('appSimpleStyle).style.color="hotpink"
+
+// <img src ="">

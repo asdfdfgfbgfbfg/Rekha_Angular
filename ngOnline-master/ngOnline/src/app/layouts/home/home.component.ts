@@ -4,13 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-home',
   template: `
     <p>
-      <img src="../../../assets/img/home.gif" />
+      <img src="../../../assets/img/home.gif" width="100%" />
     </p>
   `,
-  styles: [],
 })
-export class HomeComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class HomeComponent {}
