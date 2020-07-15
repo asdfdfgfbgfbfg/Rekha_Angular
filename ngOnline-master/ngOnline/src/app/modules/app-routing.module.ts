@@ -20,11 +20,15 @@ import { SamsungComponent } from './../products/mob-part/samsung/samsung.compone
 import { MotoComponent } from './../products/mob-part/moto/moto.component';
 import { MobileNavComponent } from '../products/mob-part/mobile-nav/mobile-nav.component';
 import { LapiOffersComponent } from '../products/laptops/lapi-offers/lapi-offers.component';
+import { EditComponent } from '../products/mob-part/edit/edit.component';
+import { ReactiveFormsComponent } from './../component/forms/reactive-forms/reactive-forms.component';
+import { TemplateFormsComponent } from './../component/forms/template-forms/template-forms.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
-
+  { path: 'temp', component: TemplateFormsComponent },
+  { path: 'react', component: ReactiveFormsComponent },
   {
     path: 'mobile',
     component: MobileNavComponent,
@@ -69,6 +73,10 @@ const appRoutes: Routes = [
     path: 'dashboard',
     canActivate: [AuthGuard],
     component: DashboardComponent,
+  },
+  {
+    path: 'edit/:id',
+    component: EditComponent,
   },
   { path: 'login', component: LoginComponent },
   {

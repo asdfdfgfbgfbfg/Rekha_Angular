@@ -34,6 +34,8 @@ import { BookOffersComponent } from './products/books/book-offers/book-offers.co
 import { HostDirective } from '../app/directives/host.directives';
 import { LapiDetailsComponent } from './products/laptops/lapi-details/lapi-details.component';
 import { LapiOffersComponent } from './products/laptops/lapi-offers/lapi-offers.component';
+import { TemplateFormsComponent } from './component/forms/template-forms/template-forms.component';
+import { ReactiveFormsComponent } from './component/forms/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,8 @@ import { LapiOffersComponent } from './products/laptops/lapi-offers/lapi-offers.
     HostDirective,
     LapiDetailsComponent,
     LapiOffersComponent,
+    TemplateFormsComponent,
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
