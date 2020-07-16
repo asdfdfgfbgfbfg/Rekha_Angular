@@ -1,1 +1,22 @@
-<p>reactive-forms works!</p>
+<h1 align="center">reactive-forms works!</h1>
+
+<form [formGroup]="formObj">
+  <div class="input-field col s12">
+    <label>Name</label>
+    <input type="text" formControlName="userName" />
+
+    <div style="color: red;" *ngIf="uName.touched && uName.invalid">
+      Error...!
+      <div *ngIf="uName.errors.required">Reuired...</div>
+      <div *ngIf="uName.errors.minlength">
+        Miniumum {{ uName.errors.minlength.requiredLength }} characters
+        required..!
+      </div>
+      <div *ngIf="uName.errors.pattern">Pattern not matched...</div>
+    </div>
+  </div>
+  <div class="input-field col s12">
+    <label>Password</label>
+    <input type="password" formControlName="pass" />
+  </div>
+</form>
