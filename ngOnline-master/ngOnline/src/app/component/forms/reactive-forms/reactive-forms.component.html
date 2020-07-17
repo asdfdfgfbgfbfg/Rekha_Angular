@@ -8,6 +8,7 @@
     <div style="color: red;" *ngIf="uName.touched && uName.invalid">
       Error...!
       <div *ngIf="uName.errors.required">Reuired...</div>
+      <div *ngIf="uName.errors.noSpace">space not allowed...</div>
       <div *ngIf="uName.errors.minlength">
         Miniumum {{ uName.errors.minlength.requiredLength }} characters
         required..!

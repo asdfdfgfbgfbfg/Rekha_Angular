@@ -37,6 +37,9 @@ import { LapiDetailsComponent } from './products/laptops/lapi-details/lapi-detai
 import { LapiOffersComponent } from './products/laptops/lapi-offers/lapi-offers.component';
 import { TemplateFormsComponent } from './component/forms/template-forms/template-forms.component';
 import { ReactiveFormsComponent } from './component/forms/reactive-forms/reactive-forms.component';
+import { ProductViewComponent } from './products/product-view/product-view.component';
+import { ChildComponent } from './component/child/child.component';
+import { ParentsComponent } from './component/parents/parents.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,9 @@ import { ReactiveFormsComponent } from './component/forms/reactive-forms/reactiv
     LapiOffersComponent,
     TemplateFormsComponent,
     ReactiveFormsComponent,
+    ProductViewComponent,
+    ChildComponent,
+    ParentsComponent,
   ],
   imports: [
     BrowserModule,
