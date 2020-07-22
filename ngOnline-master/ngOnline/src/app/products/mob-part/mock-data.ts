@@ -15,7 +15,7 @@ export const MOBPARTS: MobParts[] = [
     clsVar: true,
     country: 'Australia',
     price: 1200,
-    prodImg: 'mob3.png',
+    prodImg: 'mob1.png',
     quantity: 0,
     // size:['m',]
   },

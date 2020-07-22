@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -10,12 +11,17 @@ import { ActivatedRoute } from '@angular/router';
   `,
   styles: [],
 })
-export class ProductViewComponent implements OnInit {
-  constructor(private activatedRoute: ActivatedRoute) {
-    activatedRoute.paramMap.subscribe((param) =>
-      console.log('param:', param.get('proObj'))
-    );
-  }
+export class ProductViewComponent {
+  // constructor(private activatedRoute: ActivatedRoute) {
+  //   activatedRoute.paramMap.subscribe((param) =>
+  //     console.log('param:', param.get('proObj'))
+  //   );
+  // }
+  @Input() dataFromParent;
+  @Output() dataFromChild = new EventEmitter();
 
-  ngOnInit(): void {}
+  sendData() {
+    this.dataFromChild.emit('Hello from child..!');
+  }
+  // ngOnInit(): void {}
 }

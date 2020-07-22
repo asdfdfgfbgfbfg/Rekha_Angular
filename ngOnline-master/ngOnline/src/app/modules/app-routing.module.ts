@@ -24,11 +24,13 @@ import { EditComponent } from '../products/mob-part/edit/edit.component';
 import { ReactiveFormsComponent } from './../component/forms/reactive-forms/reactive-forms.component';
 import { TemplateFormsComponent } from './../component/forms/template-forms/template-forms.component';
 import { ProductViewComponent } from '../products/product-view/product-view.component';
+import { MoreDetailsComponent } from '../products/more-details/more-details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'product-view/:prodObj', component: ProductViewComponent },
+
   { path: 'temp', component: TemplateFormsComponent },
   { path: 'react', component: ReactiveFormsComponent },
   {
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
     component: MobileNavComponent,
     children: [
       { path: '', component: MobPartComponent },
+      { path: 'more-details', component: MoreDetailsComponent },
       {
         path: 'moto',
         component: MotoComponent,

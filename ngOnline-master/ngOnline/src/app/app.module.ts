@@ -1,3 +1,4 @@
+import { HttpPostsComponent } from './component/http-posts/http-posts.component';
 import { AuthGuard } from './guards/auth.guard';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -40,6 +41,7 @@ import { ReactiveFormsComponent } from './component/forms/reactive-forms/reactiv
 import { ProductViewComponent } from './products/product-view/product-view.component';
 import { ChildComponent } from './component/child/child.component';
 import { ParentsComponent } from './component/parents/parents.component';
+import { MoreDetailsComponent } from './products/more-details/more-details.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,9 @@ import { ParentsComponent } from './component/parents/parents.component';
     ProductViewComponent,
     ChildComponent,
     ParentsComponent,
+    MoreDetailsComponent,
+
+    HttpPostsComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,7 +86,7 @@ import { ParentsComponent } from './component/parents/parents.component';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
   ], // module : group of logics
-  bootstrap: [AppComponent], // to run : root compo
+  bootstrap: [HttpPostsComponent], // to run : root compo
   providers: [ComServic, AuthGuard],
 })
 export class AppModule {}

@@ -1,3 +1,19 @@
+<!-- <input #newProd (keyup.enter)="addProd(newProd)" />
+
+<table>
+  <tr *ngFor="let mobile of mobiles">
+    <td>{{ mobile.id }}</td>
+    <td>{{ mobile.name }}</td>
+  </tr>
+</table> -->
+<h1>dashboard works!</h1>
+<!-- <input #newProd (keyup.enter)="addProd(newProd)" /> -->
+<table>
+  <tr *ngFor="let mobPart of mobPartsApi">
+    <td>{{ mobPart.id }}</td>
+    <td>{{ mobPart.name }}</td>
+  </tr>
+</table>
 <!-- <h1>dashboard works!</h1>
 ID:<input type="number" #id value="id" /> Name:
 <input type="text" #name value="" /> Desc:
@@ -8,11 +24,11 @@ ID:<input type="number" #id value="id" /> Name:
 <input type="number" #price value="" /> Image:
 <input type="text" #prodimage value="" /> Quantity:
 <input type="number" #quantity value="" /> -->
-<button class="waves-effect waves-light btn">Add Product</button>
+<!-- <button class="waves-effect waves-light btn">Add Product</button>
 
 <table class="highlight">
   <thead>
-    <th>Id</th>
+    <th>Id:</th>
     <th>Name</th>
     <th>Description</th>
     <th>inStock</th>
@@ -40,4 +56,4 @@ ID:<input type="number" #id value="id" /> Name:
       <td><a [routerLink]="['mobPart/edit', mobPart.id]">Edit</a></td>
     </tr>
   </tbody>
-</table>
+</table> -->

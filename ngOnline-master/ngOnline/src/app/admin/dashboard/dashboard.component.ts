@@ -1,23 +1,54 @@
-import { DashboardService } from './../../services/dashboard.service';
-import { MobParts } from './../../models/mob-parts';
+// import { MOBPARTS } from './../../products/mob-part/mock-data';
+// import { Component, OnInit } from '@angular/core';
+
+// @Component({
+//   selector: 'app-dashboard',
+//   templateUrl: './dashboard.component.html',
+// })
+// export class DashboardComponent implements OnInit {
+//   mobiles;
+//   constructor() {}
+
+//   ngOnInit(): void {
+//     this.mobiles = MOBPARTS;
+//   }
+
+//   addProd(newProd) {
+//     console.clear();
+//     console.log(' newProd', newProd);
+
+//     this.mobiles.push(newProd);
+//   }
+// }
+
+import { MOBPARTS } from './../../products/mob-part/mock-data';
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styles: [],
 })
 export class DashboardComponent implements OnInit {
-  mobParts: any;
-  constructor(private dashboardService: DashboardService) {
-    // D.inj to create OBJ
-    console.log('2 Constructor Block...!');
-  }
+  mobiles;
+
+  url = 'https://my-json-server.typicode.com/MSraoSuryawanshi/api/db';
+  mobPartsApi;
+  constructor(private http: Http) {}
 
   ngOnInit(): void {
-    this.dashboardService
-      .getMobParts()
-      .subscribe((res) => (this.mobParts = res));
+    this.mobiles = MOBPARTS;
+
+    this.http.get(this.url).subscribe((res) => {
+      console.log('res', res.json().apiData);
+      this.mobPartsApi = res.json().apiData;
+    });
   }
-  MobParts: MobParts[];
+
+  addProd(newProd) {
+    console.clear();
+    console.log(' newProd', newProd);
+
+    this.mobiles.push(newProd);
+  }
 }

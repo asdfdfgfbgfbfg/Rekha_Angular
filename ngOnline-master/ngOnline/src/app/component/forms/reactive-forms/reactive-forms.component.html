@@ -9,6 +9,9 @@
       Error...!
       <div *ngIf="uName.errors.required">Reuired...</div>
       <div *ngIf="uName.errors.noSpace">space not allowed...</div>
+      <!-- <div *ngIf="uName.errors.capsLetter">
+        should not start with number ...
+      </div> -->
       <div *ngIf="uName.errors.minlength">
         Miniumum {{ uName.errors.minlength.requiredLength }} characters
         required..!
